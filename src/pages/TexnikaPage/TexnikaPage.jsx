@@ -25,7 +25,9 @@ const TexnikaPage = () => {
           </div>
         </div>
         <div>
-          <div></div>
+          <div>
+            <div></div>
+          </div>
         </div>
       </div>
     </div>
