@@ -24,7 +24,9 @@ const TexnikaPage = () => {
             <img src={activeData[0]?.image} alt="" width={40} height={40} />
           </div>
         </div>
-        <div></div>
+        <div>
+          <div></div>
+        </div>
       </div>
     </div>
   );
