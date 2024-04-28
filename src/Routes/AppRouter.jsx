@@ -6,7 +6,11 @@ import UsersGenerator from "../pages/UsersAdder/UsersGenerator";
 import Contact from "../pages/ContactPage/Contact";
 import LoginPage from "../pages/LoginPage/LoginPage";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchGetActiveUsers, fetchGetAllCountries, fetchGetAllUsers } from "../store/Slices/UsersSlice/API";
+import {
+  fetchGetActiveUsers,
+  fetchGetAllCountries,
+  fetchGetAllUsers,
+} from "../store/Slices/UsersSlice/API";
 import ProfilePosts from "../components/ProfilePosts/ProfilePosts";
 import ProfileLayout from "../pages/ProfileLayout/ProfileLayout";
 import ProfileAbout from "../components/ProfileAbout/ProfileAbout";
@@ -16,6 +20,7 @@ import { selectActiveUsers } from "../store/Slices/UsersSlice/activeUsersSlice";
 import { selectUser } from "../store/Slices/UsersSlice/usersSlice";
 
 const AppRouter = () => {
+  const one = 1;
   const dispatch = useDispatch();
   const allUsers = useSelector(selectUser);
   const { activeData } = useSelector(selectActiveUsers);
@@ -29,8 +34,12 @@ const AppRouter = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
-          {activeData.length < 1 && <Route path="register" element={<UsersGenerator />} />}
-          {activeData.length < 1 && <Route path="login" element={<LoginPage />} />}
+          {activeData.length < 1 && (
+            <Route path="register" element={<UsersGenerator />} />
+          )}
+          {activeData.length < 1 && (
+            <Route path="login" element={<LoginPage />} />
+          )}
           <Route path="contact" element={<Contact />} />
           {activeData.length > 0 && (
             <Route path="profile" element={<ProfileLayout />}>

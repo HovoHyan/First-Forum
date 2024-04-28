@@ -10,7 +10,9 @@ const TexnikaPage = () => {
     <div className="technicaDiv">
       <div className="texnikaDesc">
         <h1 className="texnika-main-text">Texnika</h1>
-        <p className="texnika-secondary-text">you can write here about Technica</p>
+        <p className="texnika-secondary-text">
+          you can write here about Technica
+        </p>
       </div>
       <p onClick={() => navigate(-1)} className="goBackBtn">
         Go Back
@@ -20,6 +22,11 @@ const TexnikaPage = () => {
         <div className="texnika-card">
           <div className="">
             <img src={activeData[0]?.image} alt="" width={40} height={40} />
+          </div>
+        </div>
+        <div>
+          <div>
+            <div></div>
           </div>
         </div>
       </div>
