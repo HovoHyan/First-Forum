@@ -1,0 +1,45 @@
+.posts {
+  display: flex;
+  justify-content: baseline;
+  padding-top: 20px;
+  gap: 40px;
+}
+
+.status {
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+}
+
+.posts-text {
+  font-size: 14px;
+  margin-top: 50px;
+}
+
+.post-write {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 50%;
+}
+
+.post-textArea {
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+  height: 200px;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  overflow: hidden;
+}
+
+.post-textArea::placeholder {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.select-theme {
+  width: 20%;
+}

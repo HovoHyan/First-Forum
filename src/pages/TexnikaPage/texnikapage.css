@@ -1,0 +1,44 @@
+.texnika-main-text {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.texnika-secondary-text {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.technicaDiv {
+  padding: 50px 120px;
+  margin: 0 auto;
+  width: 1500px;
+  height: 2000px;
+}
+
+.goBackBtn {
+  font-family: Arial, Helvetica, sans-serif;
+  color: gray;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.goBackBtn:hover {
+  text-decoration: underline;
+}
+
+.main-texnika-box {
+  width: 1200px;
+  height: 900px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.texnika-card {
+  width: 90%;
+  height: 60px;
+  border: 1px solid grey;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+}

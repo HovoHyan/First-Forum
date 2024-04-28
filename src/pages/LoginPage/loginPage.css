@@ -1,0 +1,84 @@
+.login {
+  display: flex;
+  justify-content: center;
+  margin: 50px;
+}
+
+.LoginPage {
+  width: 400px;
+  background: rgb(39, 38, 38);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 40px;
+  border-radius: 4px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 9);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.login-text {
+  font-size: 2em;
+  color: #2c9caf;
+  text-transform: uppercase;
+}
+
+.form-inputs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.inputs-div {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.inputs-div input {
+  position: relative;
+  width: 100%;
+  background: #333;
+  border: none;
+  outline: none;
+  padding: 15px 10px 7.5px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+.login-button {
+  padding: 10px;
+  background: #2c9caf;
+  border: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1.35em;
+  letter-spacing: 0.05em;
+  cursor: pointer;
+  width: 100%;
+}
+.login-button:active {
+  opacity: 0.6;
+}
+
+.links {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.links a:nth-child(2) {
+  color: #2c9caf;
+  font-weight: 600;
+}

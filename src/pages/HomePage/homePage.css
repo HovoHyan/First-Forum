@@ -1,0 +1,18 @@
+.home-page {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.home-container {
+  display: flex;
+  width: 1440px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+.home-forums {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}

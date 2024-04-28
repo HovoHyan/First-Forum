@@ -1,0 +1,215 @@
+nav {
+  background-color: rgb(39, 38, 38);
+  height: 70px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+}
+
+.nav-main-text {
+  text-decoration: none;
+  font-size: 40px;
+  text-transform: uppercase;
+  color: white;
+  font-family: "Jersey 25", sans-serif;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: large;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s ease-in-out;
+  position: relative;
+}
+.nav-link::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  height: 3px;
+  background-color: white;
+  transform: scaleX(0);
+  transition: 0.2s;
+}
+
+.nav-link:hover::before {
+  transform: scaleX(1);
+}
+
+.nav-login-reg {
+  display: flex;
+  justify-self: flex-end;
+  align-items: center;
+  gap: 20px;
+}
+
+.register-text {
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1em 1em;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #2c9caf;
+  transition: all 1000ms;
+  font-size: 14px;
+  position: relative;
+  overflow: hidden;
+  outline: 2px solid #2c9caf;
+}
+
+.register-text:hover {
+  color: #ffffff;
+  transform: scale(1.1);
+  outline: 2px solid #70bdca;
+  box-shadow: 4px 5px 17px -4px #268391;
+}
+
+.register-text::before {
+  content: "";
+  position: absolute;
+  left: -50px;
+  top: 0;
+  width: 0;
+  height: 100%;
+  background-color: #2c9caf;
+  transform: skewX(45deg);
+  z-index: -1;
+  transition: width 1000ms;
+}
+
+.register-text:hover::before {
+  width: 250%;
+}
+
+.nav-login-text {
+  background-color: transparent;
+  color: #fff;
+  border: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  transition: 0.2s;
+}
+
+.nav-login-text:hover {
+  color: #2c9caf;
+}
+
+.active {
+  color: #2c9caf;
+}
+
+.active::before {
+  transform: scaleX(1);
+  background-color: #2c9caf;
+}
+
+.login-block {
+  background-color: white;
+  height: 250px;
+  width: 300px;
+  position: fixed;
+  top: 55px;
+  right: 20%;
+  transition: 0.6s;
+  border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  vertical-align: middle;
+  gap: 10px;
+  justify-content: space-between;
+  margin-top: 30px;
+}
+
+.forgot-password-text {
+  display: block;
+  text-decoration: none;
+  color: #268391;
+}
+
+.login-block-button {
+  font-size: 15px;
+  padding: 10px 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: white;
+  background-color: rgb(39, 38, 38);
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 1px solid white;
+  position: relative;
+  overflow: hidden;
+  width: 150px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.login-block-button:hover {
+  box-shadow: #fff 0px 5px 15px;
+}
+
+.login-block-button:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, #fff, transparent);
+  transition: all 650ms;
+}
+
+.login-block-button:hover:before {
+  left: 100%;
+}
+
+.login-form input {
+  padding: 5px 5px;
+  border-radius: 50px;
+  margin-bottom: 5px;
+  border: 1px solid gray;
+}
+
+.active-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.log-out {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  color: white;
+}
