@@ -5,6 +5,12 @@
   gap: 40px;
 }
 
+.posts img {
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
+
 .status {
   width: 100%;
   border-radius: 10px;
