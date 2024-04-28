@@ -17,6 +17,7 @@ import { selectUser } from "../store/Slices/UsersSlice/usersSlice";
 
 const AppRouter = () => {
   const dispatch = useDispatch();
+  const number = 0;
   const allUsers = useSelector(selectUser);
   const { activeData } = useSelector(selectActiveUsers);
   useEffect(() => {
