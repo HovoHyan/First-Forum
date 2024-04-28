@@ -6,6 +6,7 @@ import { selectActiveUsers } from "../../store/Slices/UsersSlice/activeUsersSlic
 const TexnikaPage = () => {
   const { activeData } = useSelector(selectActiveUsers);
   const navigate = useNavigate();
+  const number = 10;
   return (
     <div className="technicaDiv">
       <div className="texnikaDesc">
