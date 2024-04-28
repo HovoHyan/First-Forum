@@ -6,7 +6,6 @@ import { selectActiveUsers } from "../../store/Slices/UsersSlice/activeUsersSlic
 const TexnikaPage = () => {
   const { activeData } = useSelector(selectActiveUsers);
   const navigate = useNavigate();
-  const number = 10;
   return (
     <div className="technicaDiv">
       <div className="texnikaDesc">
@@ -18,16 +17,10 @@ const TexnikaPage = () => {
       <p onClick={() => navigate(-1)} className="goBackBtn">
         Go Back
       </p>
-
       <div className="main-texnika-box">
         <div className="texnika-card">
           <div className="">
-            <img src={activeData[0]?.image} alt="" width={40} height={40} />
-          </div>
-        </div>
-        <div>
-          <div>
-            <div></div>
+            <img src={activeData[0]?.image} alt="User" width={40} height={40} />
           </div>
         </div>
       </div>

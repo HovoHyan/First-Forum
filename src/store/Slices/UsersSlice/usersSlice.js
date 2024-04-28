@@ -1,5 +1,9 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchAddActiveUser, fetchAddNewUser, fetchGetAllUsers, fetchPatchAllUsers } from "./API";
+import {
+  fetchAddActiveUser,
+  fetchAddNewUser,
+  fetchGetAllUsers,
+} from "./API";
 
 const usersSLice = createSlice({
   name: "allUsersData",

@@ -1261,9 +1261,8 @@
       "age": "14",
       "password": "123456",
       "country": "Finland",
-      "posts": [  
-        "1714225988985",
-        "1714226002895"
+      "posts": [
+        "1714333326515"
       ],
       "image": "https://www.computerhope.com/jargon/g/guest-user.png"
     }
@@ -1283,23 +1282,13 @@
   ],
   "technicaData": [
     {
-      "id": "1714225988985",
+      "id": "1714333326515",
       "userId": "1714049831623",
       "userAvatar": "https://www.computerhope.com/jargon/g/guest-user.png",
-      "postText": "asdsadsadas",
-      "postDesc": "dasdasd",
+      "postText": "JavaScript",
+      "postDesc": "What data types in JavaScript?",
       "theme": "Technica",
-      "postTime": "27.04.2024, 17:53:06",
-      "likes": []
-    },
-    {
-      "id": "1714226002895",
-      "userId": "1714049831623",
-      "userAvatar": "https://www.computerhope.com/jargon/g/guest-user.png",
-      "postText": "asdsadas",
-      "postDesc": "dasdasd",
-      "theme": "Technica",
-      "postTime": "27.04.2024, 17:53:20",
+      "postTime": "28.04.2024, 23:42:00",
       "likes": []
     }
   ]

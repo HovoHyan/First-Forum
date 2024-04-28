@@ -2,7 +2,7 @@ import React from "react";
 import "./profilePosts.css";
 import { useDispatch, useSelector } from "react-redux";
 import { selectActiveUsers } from "../../store/Slices/UsersSlice/activeUsersSlice";
-import { fetchAddNewPost, fetchPatchAllUsers } from "../../store/Slices/UsersSlice/API";
+import { fetchAddNewPost } from "../../store/Slices/UsersSlice/API";
 import { selectUser } from "../../store/Slices/UsersSlice/usersSlice";
 
 const ProfilePosts = () => {
@@ -29,16 +29,14 @@ const ProfilePosts = () => {
       postTime: date,
       likes: [],
     };
-    dispatch(fetchPatchAllUsers({ data: newPost, userPosts: userPost.posts }));
-    dispatch(fetchAddNewPost(newPost));
+    dispatch(fetchAddNewPost({ data: newPost, updateData: userPost.posts }));
     e.target.reset();
   };
 
   return (
     <div className="profile-posts">
       <div className="posts">
-        <img src={activeData[0]?.image} alt="" style={{ width: "50px", height: "50px", borderRadius: "10px" }} />
-
+        <img src={userPost?.image} alt="User" />
         <form className="post-write" onSubmit={submitPost}>
           <input type="text" placeholder="Write a theme name" className="status" name="postText" required />
           <textarea type="text" placeholder="Write a theme name" className="post-textArea" name="postDesc"></textarea>
