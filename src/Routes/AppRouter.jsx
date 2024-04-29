@@ -10,6 +10,7 @@ import {
   fetchGetActiveUsers,
   fetchGetAllCountries,
   fetchGetAllUsers,
+  fetchGetTexnikaData,
 } from "../store/Slices/UsersSlice/API";
 import ProfilePosts from "../components/ProfilePosts/ProfilePosts";
 import ProfileLayout from "../pages/ProfileLayout/ProfileLayout";
@@ -22,6 +23,7 @@ const AppRouter = () => {
   const dispatch = useDispatch();
   const { activeData } = useSelector(selectActiveUsers);
   useEffect(() => {
+    dispatch(fetchGetTexnikaData());
     dispatch(fetchGetActiveUsers());
     dispatch(fetchGetAllUsers());
     dispatch(fetchGetAllCountries());

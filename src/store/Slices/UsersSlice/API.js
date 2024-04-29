@@ -35,6 +35,14 @@ export const fetchGetActiveUsers = createAsyncThunk(
   }
 );
 
+export const fetchGetTexnikaData = createAsyncThunk(
+  "texnikaData/fetchGetTexnikaData",
+  async () => {
+    const result = await GET("http://localhost:3005/technicaData");
+    return result;
+  }
+);
+
 export const fetchAddActiveUser = createAsyncThunk(
   "allUsersData/fetchAddActiveUser",
   async (newUser) => {
