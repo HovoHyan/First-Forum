@@ -26,5 +26,4 @@ const usersSLice = createSlice({
 });
 
 export const selectUser = (state) => state.allUsersData;
-export const { addNewUser } = usersSLice.actions;
 export const usersReducer = usersSLice.reducer;

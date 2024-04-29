@@ -1,7 +1,7 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { UseRequest } from "../../../hook/UseRequest";
 
-const { POST, GET, DELETE, PATCH } = UseRequest();
+const { POST, GET, DELETE, PUT } = UseRequest();
 
 export const fetchGetAllCountries = createAsyncThunk(
   "countryData/fetchGetAllCountries",
@@ -55,13 +55,12 @@ export const fetchAddNewPost = createAsyncThunk(
   "postsData/fetchAddNewPost",
   async ({ data, updateData }) => {
     const result = await POST("http://localhost:3005/technicaData", data);
-    const result2 = await PATCH({
+    const user = await GET(`http://localhost:3005/usersData/${data.userId}`);
+    const result2 = await PUT({
       url: `http://localhost:3005/usersData/${data.userId}`,
       updateData,
-      newData: [...updateData, data.id],
+      newData: { ...updateData, posts: [...user.posts, data.id] },
     });
     return { result, result2 };
   }
 );
-
-

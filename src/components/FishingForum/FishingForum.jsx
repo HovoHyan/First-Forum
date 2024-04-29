@@ -34,7 +34,6 @@ const FishingForum = () => {
             Fishing Politics, Rules and Regulations
           </a>
         </div>
-
         {fishingForums.map((forum) => {
           return (
             <div className="forum" key={forum.id}>
