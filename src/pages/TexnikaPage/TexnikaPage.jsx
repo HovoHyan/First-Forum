@@ -2,9 +2,10 @@ import React from "react";
 import "./texnikapage.css";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { selectActiveUsers } from "../../store/Slices/UsersSlice/activeUsersSlice";
+import { selectTexnikaData } from "../../store/Slices/UsersSlice/texnikaPageSlice";
 const TexnikaPage = () => {
-  const { activeData } = useSelector(selectActiveUsers);
+  const { texnikaData } = useSelector(selectTexnikaData);
+  console.log(texnikaData[0]);
   const navigate = useNavigate();
   return (
     <div className="technicaDiv">
@@ -18,11 +19,13 @@ const TexnikaPage = () => {
         Go Back
       </p>
       <div className="main-texnika-box">
-        <div className="texnika-card">
-          <div className="">
-            <img src={activeData[0]?.image} alt="User" width={40} height={40} />
-          </div>
-        </div>
+        {texnikaData.map((texnika) => {
+          <div className="texnika-card">
+            <div className="">
+              <img src={texnika.userAvatar} alt="User" width={40} height={40} />
+            </div>
+          </div>;
+        })}
       </div>
     </div>
   );
