@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { selectUser } from "../../store/Slices/UsersSlice/usersSlice";
-import "./usersGenerator.css";
+import "./register.css";
 import { FaEyeSlash, FaEye } from "react-icons/fa";
 import { fetchAddNewUser } from "../../store/Slices/UsersSlice/API";
 import { selectCountries } from "../../store/Slices/UsersSlice/country";
 
-const UsersGenerator = () => {
+const Register = () => {
   const dispatch = useDispatch();
   const users = useSelector(selectUser);
   const [show, setShow] = useState(false);
@@ -97,4 +97,4 @@ const UsersGenerator = () => {
   );
 };
 
-export default UsersGenerator;
+export default Register;

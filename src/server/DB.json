@@ -1262,7 +1262,8 @@
       "password": "123456",
       "country": "Finland",
       "posts": [
-        "1714333326515"
+        "1714400134061",
+        "1714400167542"
       ],
       "image": "https://www.computerhope.com/jargon/g/guest-user.png"
     }
@@ -1282,13 +1283,23 @@
   ],
   "technicaData": [
     {
-      "id": "1714333326515",
+      "id": "1714400134061",
       "userId": "1714049831623",
       "userAvatar": "https://www.computerhope.com/jargon/g/guest-user.png",
-      "postText": "JavaScript",
-      "postDesc": "What data types in JavaScript?",
+      "postText": "JavaSqript",
+      "postDesc": "What types you know in JavaScript?",
       "theme": "Technica",
-      "postTime": "28.04.2024, 23:42:00",
+      "postTime": "29.04.2024, 18:15:23",
+      "likes": []
+    },
+    {
+      "id": "1714400167542",
+      "userId": "1714049831623",
+      "userAvatar": "https://www.computerhope.com/jargon/g/guest-user.png",
+      "postText": "JavaSqript",
+      "postDesc": "What functions are there in JavaScript?",
+      "theme": "Technica",
+      "postTime": "29.04.2024, 18:15:23",
       "likes": []
     }
   ]

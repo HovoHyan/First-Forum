@@ -19,15 +19,12 @@ export const UseRequest = () => {
     });
   };
 
-  const PATCH = async ({ url, oldData, newData }) => {
+  const PUT = async ({ url, newData }) => {
     const result = await fetch(url, {
-      method: "PATCH",
-      body: JSON.stringify({ posts: newData }),
-      headers: {
-        "Content-Type": "application/json",
-      },
+      method: "PUT",
+      body: JSON.stringify(newData),
     });
     return result.json();
   };
-  return { GET, POST, DELETE, PATCH };
+  return { GET, POST, DELETE, PUT };
 };
