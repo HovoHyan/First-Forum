@@ -1,9 +1,9 @@
 import React from "react";
-import "./texnikapage.css";
+import "./recipepage.css";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectTexnikaData } from "../../store/Slices/UsersSlice/texnikaPageSlice";
-const TexnikaPage = () => {
+const RecipePage = () => {
   const { texnikaData } = useSelector(selectTexnikaData);
 
   const navigate = useNavigate();
@@ -41,4 +41,4 @@ const TexnikaPage = () => {
   );
 };
 
-export default TexnikaPage;
+export default RecipePage;

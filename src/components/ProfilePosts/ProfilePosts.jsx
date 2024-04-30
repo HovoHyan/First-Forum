@@ -10,7 +10,6 @@ const ProfilePosts = () => {
   const { activeData } = useSelector(selectActiveUsers);
   const dispatch = useDispatch();
   const date = new Date().toLocaleString().toString();
-  const userPost = data.find((el) => el.id === activeData[0]?.id);
 
   const submitPost = async (e) => {
     e.preventDefault();
@@ -21,45 +20,33 @@ const ProfilePosts = () => {
     } = e.target;
     const newPost = {
       id: new Date().getTime().toString(),
-      userId: userPost.id,
-      userAvatar: userPost.image,
+      userId: activeData[0]?.id,
+      userAvatar: activeData[0]?.image,
       postText,
       postDesc,
       theme,
       postTime: date,
       likes: [],
+      username: activeData[0]?.userName,
     };
-    dispatch(fetchAddNewPost({ data: newPost, updateData: userPost }));
+    dispatch(fetchAddNewPost({ data: newPost, activeUser: activeData[0] }));
     e.target.reset();
   };
 
   return (
     <div className="profile-posts">
       <div className="posts">
-        <img src={userPost?.image} alt="User" />
+        <img src={activeData[0]?.image} alt="User" />
         <form className="post-write" onSubmit={submitPost}>
-          <input
-            type="text"
-            placeholder="Write a theme name"
-            className="status"
-            name="postText"
-            required
-          />
-          <textarea
-            type="text"
-            placeholder="Write a theme name"
-            className="post-textArea"
-            name="postDesc"
-          ></textarea>
+          <input type="text" placeholder="Write a theme name" className="status" name="postText" required />
+          <textarea type="text" placeholder="Write a theme name" className="post-textArea" name="postDesc"></textarea>
           <select name="theme" className="select-theme">
             <option>Technica</option>
           </select>
           <button className="login-button">Submit Post</button>
         </form>
       </div>
-      <p className="posts-text">
-        There are no messages on {activeData[0]?.userName}'s profile yet.
-      </p>
+      <p className="posts-text">There are no messages on {activeData[0]?.userName}'s profile yet.</p>
     </div>
   );
 };

@@ -16,13 +16,13 @@ const TunaTalk = () => {
     },
     {
       id: 2,
-      title: "Tuna Fishing Techniques",
-      text: "What are you using and how are you doing it?",
+      title: "Recipe",
+      text: "What cook today",
       comment: 50,
       thread: "776",
       info: "Made a harpoon!",
       date: "Yesterday at 7:06 PM",
-      path: "ddd",
+      path: "recipe",
     },
     {
       id: 3,

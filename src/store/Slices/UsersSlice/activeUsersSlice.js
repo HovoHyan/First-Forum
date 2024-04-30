@@ -1,9 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import {
-  fetchAddActiveUser,
-  fetchGetActiveUsers,
-  fetchPopActiveUser,
-} from "./API";
+import { fetchAddActiveUser, fetchGetActiveUsers, fetchPopActiveUser } from "./API";
 
 const activeUsersSLice = createSlice({
   name: "activeUsersData",

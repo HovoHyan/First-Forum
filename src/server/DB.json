@@ -1262,56 +1262,68 @@
       "password": "123456",
       "country": "Finland",
       "posts": [
-        "1714400134061",
-        "1714400167542",
-        "1714412635593"
+        "1714485495944"
       ],
       "image": "https://www.computerhope.com/jargon/g/guest-user.png"
     }
   ],
-  "activeLoginData": [
-    {
-      "id": "1714049831623",
-      "active": false,
-      "userName": "NickName",
-      "email": "name@gmail.com",
-      "age": "14",
-      "password": "123456",
-      "country": "Finland",
-      "posts": [],
-      "image": "https://www.computerhope.com/jargon/g/guest-user.png"
-    }
-  ],
+  "activeLoginData": [],
   "technicaData": [
     {
-      "id": "1714400134061",
+      "id": "1714485488651",
       "userId": "1714049831623",
       "userAvatar": "https://www.computerhope.com/jargon/g/guest-user.png",
-      "postText": "JavaSqript",
-      "postDesc": "What types you know in JavaScript?",
+      "postText": "wefsf",
+      "postDesc": "asdfasdf",
       "theme": "Technica",
-      "postTime": "29.04.2024, 18:15:23",
-      "likes": []
+      "postTime": "30.04.2024, 17:58:06",
+      "likes": [],
+      "username": "NickName"
     },
     {
-      "id": "1714400167542",
+      "id": "1714485490984",
       "userId": "1714049831623",
       "userAvatar": "https://www.computerhope.com/jargon/g/guest-user.png",
-      "postText": "JavaSqript",
-      "postDesc": "What functions are there in JavaScript?",
+      "postText": "asdfasdfasd",
+      "postDesc": "fasdfasdfasdf",
       "theme": "Technica",
-      "postTime": "29.04.2024, 18:15:23",
-      "likes": []
+      "postTime": "30.04.2024, 17:58:06",
+      "likes": [],
+      "username": "NickName"
     },
     {
-      "id": "1714412635593",
+      "id": "1714485492744",
       "userId": "1714049831623",
       "userAvatar": "https://www.computerhope.com/jargon/g/guest-user.png",
-      "postText": "asdas",
-      "postDesc": "dasdasdasdasdas",
+      "postText": "asdfadsf",
+      "postDesc": "asdfasdf",
       "theme": "Technica",
-      "postTime": "29.04.2024, 21:43:52",
-      "likes": []
+      "postTime": "30.04.2024, 17:58:06",
+      "likes": [],
+      "username": "NickName"
+    },
+    {
+      "id": "1714485494283",
+      "userId": "1714049831623",
+      "userAvatar": "https://www.computerhope.com/jargon/g/guest-user.png",
+      "postText": "asdfadf",
+      "postDesc": "asdfasd",
+      "theme": "Technica",
+      "postTime": "30.04.2024, 17:58:06",
+      "likes": [],
+      "username": "NickName"
+    },
+    {
+      "id": "1714485495944",
+      "userId": "1714049831623",
+      "userAvatar": "https://www.computerhope.com/jargon/g/guest-user.png",
+      "postText": "sdfasdf",
+      "postDesc": "asdfasdf",
+      "theme": "Technica",
+      "postTime": "30.04.2024, 17:58:06",
+      "likes": [],
+      "username": "NickName"
     }
-  ]
+  ],
+  "recipeData": []
 }
