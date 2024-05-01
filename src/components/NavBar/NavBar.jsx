@@ -8,6 +8,7 @@ import {
   fetchGetActiveUsers,
   fetchPopActiveUser,
 } from "../../store/Slices/UsersSlice/API";
+import ReactSearchBox from "react-search-box";
 
 const NavBar = () => {
   const dispatch = useDispatch();
@@ -20,6 +21,7 @@ const NavBar = () => {
   const handleOut = () => {
     dispatch(fetchPopActiveUser(activeID));
   };
+
   return (
     <nav>
       <div className="nav-bar">
@@ -32,6 +34,9 @@ const NavBar = () => {
           </NavLink>
           <NavLink className="nav-link" to="/contact">
             Contact Us
+          </NavLink>
+          <NavLink className="nav-link" to="/messages">
+            Messages
           </NavLink>
         </div>
         {activeData.length === 0 ? (
@@ -55,7 +60,6 @@ const NavBar = () => {
                 }}
               />
             </Link>
-
             <p>|</p>
             <IoIosLogOut className="log-out" onClick={handleOut} />
           </div>

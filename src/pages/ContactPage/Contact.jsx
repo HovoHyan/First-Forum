@@ -3,6 +3,9 @@ import "./contact.css";
 import Logo from "../../images/RecaptchaLogo.png";
 
 const Contact = () => {
+  const sendMessage = async (e) => {
+    e.preventDefault();
+  };
   return (
     <div className="contact_container">
       <div className="contact_us">
