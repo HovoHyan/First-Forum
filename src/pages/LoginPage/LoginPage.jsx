@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import "./loginPage.css";
 import { selectUser } from "../../store/Slices/UsersSlice/usersSlice";
-import { fetchAddActiveUser } from "../../store/Slices/UsersSlice/API";
+import { fetchAddActiveUser } from "../../store/Slices/ActiveUsersSlice/API";
 import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {

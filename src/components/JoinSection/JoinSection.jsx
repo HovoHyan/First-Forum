@@ -2,7 +2,8 @@ import React from "react";
 import "./joinSection.css";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { selectActiveUsers } from "../../store/Slices/UsersSlice/activeUsersSlice";
+import { selectActiveUsers } from "../../store/Slices/ActiveUsersSlice/activeUsersSlice";
+
 const JoinSection = () => {
   const { activeData } = useSelector(selectActiveUsers);
   return (

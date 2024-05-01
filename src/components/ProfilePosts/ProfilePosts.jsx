@@ -1,12 +1,11 @@
 import React from "react";
 import "./profilePosts.css";
 import { useDispatch, useSelector } from "react-redux";
-import { selectActiveUsers } from "../../store/Slices/UsersSlice/activeUsersSlice";
-import { fetchAddNewPost } from "../../store/Slices/UsersSlice/API";
-import { selectUser } from "../../store/Slices/UsersSlice/usersSlice";
+import { selectActiveUsers } from "../../store/Slices/ActiveUsersSlice/activeUsersSlice";
+import { fetchAddNewPost } from "../../store/Slices/PostsSlice/API";
+
 
 const ProfilePosts = () => {
-  const { data } = useSelector(selectUser);
   const { activeData } = useSelector(selectActiveUsers);
   const dispatch = useDispatch();
   const date = new Date().toLocaleString().toString();

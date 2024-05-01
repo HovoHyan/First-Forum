@@ -1,5 +1,4 @@
 import { useSelector, useDispatch } from "react-redux";
-import { selectActiveUsers } from "../../store/Slices/UsersSlice/activeUsersSlice";
 import "./navbar.css";
 import { Link, NavLink } from "react-router-dom";
 import { IoIosLogOut } from "react-icons/io";
@@ -7,7 +6,8 @@ import { useEffect } from "react";
 import {
   fetchGetActiveUsers,
   fetchPopActiveUser,
-} from "../../store/Slices/UsersSlice/API";
+} from "../../store/Slices/ActiveUsersSlice/API";
+import { selectActiveUsers } from "../../store/Slices/ActiveUsersSlice/activeUsersSlice";
 
 const NavBar = () => {
   const dispatch = useDispatch();

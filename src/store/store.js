@@ -1,10 +1,10 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { usersReducer } from "./Slices/UsersSlice/usersSlice";
-import { activeUsersReducer } from "./Slices/UsersSlice/activeUsersSlice";
-import { allCountrySlicesReducer } from "./Slices/UsersSlice/country";
-import { postsReducer } from "./Slices/UsersSlice/postsSlice";
-import { texnikaPageReducer } from "./Slices/UsersSlice/texnikaPageSlice";
-import { recipePageReducer } from "./Slices/UsersSlice/recipePageSlice";
+import { activeUsersReducer } from "./Slices/ActiveUsersSlice/activeUsersSlice";
+import { allCountrySlicesReducer } from "./Slices/CountrySlice/country";
+import { postsReducer } from "./Slices/PostsSlice/postsSlice";
+import { texnikaPageReducer } from "./Slices/TexnikaSlice/texnikaPageSlice";
+import { recipePageReducer } from "./Slices/RecipSlice/recipePageSlice";
 
 const store = configureStore({
   reducer: {

@@ -1,15 +1,20 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { UseRequest } from "../../../hook/UseRequest";
 
-const { POST, GET, PUT } = UseRequest();
+const { POST, GET, DELETE, PUT } = UseRequest();
 
-export const fetchGetAllUsers = createAsyncThunk("allUsersData/fetchGetAllUsers", async () => {
-  const result = await GET("http://localhost:3005/usersData");
+export const fetchGetActiveUsers = createAsyncThunk("allUsersData/fetchGetActiveUsers", async () => {
+  const result = await GET("http://localhost:3005/activeLoginData");
   return result;
 });
 
-export const fetchAddNewUser = createAsyncThunk("allUsersData/fetchAddNewUser", async (newUser) => {
-  const result = await POST("http://localhost:3005/usersData", newUser);
+export const fetchAddActiveUser = createAsyncThunk("allUsersData/fetchAddActiveUser", async (newUser) => {
+  const result = await POST("http://localhost:3005/activeLoginData", newUser);
+  return result;
+});
+
+export const fetchPopActiveUser = createAsyncThunk("allUsersData/fetchPopActiveUser", async (id) => {
+  const result = await DELETE(`http://localhost:3005/activeLoginData/${id}`);
   return result;
 });
 
