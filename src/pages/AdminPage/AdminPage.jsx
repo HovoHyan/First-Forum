@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import './adminPage.css';
 import { selectUser } from '../../store/Slices/UsersSlice/usersSlice';
-import { selectActiveUsers } from '../../store/Slices/UsersSlice/activeUsersSlice';
+import { selectActiveUsers } from '../../store/Slices/ActiveUsersSlice/activeUsersSlice';
 import { useEffect, useState } from 'react';
 import { fetchGetAllUsers } from '../../store/Slices/UsersSlice/API';
 function AdminPage () {
