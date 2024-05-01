@@ -49,7 +49,7 @@ const LoginPage = () => {
               type="password"
             />
           </div>
-          <div class="links">
+          <div className="links">
             <a href="#">Forgot Password?</a> <a href="/register">Register</a>
           </div>
           <div>

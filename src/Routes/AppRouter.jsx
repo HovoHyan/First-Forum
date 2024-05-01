@@ -17,6 +17,7 @@ import ProfilePostings from "../components/ProfilePostings/ProfilePostings";
 import TexnikaPage from "../pages/TexnikaPage/TexnikaPage";
 import RecipePage from "../pages/RecipePage/RecipePage";
 import { selectActiveUsers } from "../store/Slices/ActiveUsersSlice/activeUsersSlice";
+import MessagesPage from "../pages/MessagesPage/MessagesPage";
 
 const AppRouter = () => {
   const dispatch = useDispatch();
@@ -39,6 +40,7 @@ const AppRouter = () => {
             <Route path="login" element={<LoginPage />} />
           )}
           <Route path="contact" element={<Contact />} />
+          <Route path="messages" element={<MessagesPage />} />
           {activeData.length > 0 && (
             <Route path="profile" element={<ProfileLayout />}>
               <Route path="profilePosts" element={<ProfilePosts />} />

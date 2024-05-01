@@ -46,8 +46,12 @@ const TunaTalk = () => {
         </div>
         {talkForums.map((forum) => {
           return (
-            <Link to={`forums/${forum.path}`} className="tuna-talk-box">
-              <div className="forum" key={forum.id}>
+            <Link
+              to={`forums/${forum.path}`}
+              key={forum.id}
+              className="tuna-talk-box"
+            >
+              <div className="forum">
                 <div className="forum-message">
                   <img
                     src="https://forums.coastsidefishingclub.com/styles/coastside/coastside/icons/node-icon-general.svg"

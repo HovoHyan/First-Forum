@@ -1261,13 +1261,23 @@
       "age": "14",
       "password": "123456",
       "country": "Finland",
-      "posts": [
-        "1714485495944"
-      ],
+      "posts": ["1714485495944"],
       "image": "https://www.computerhope.com/jargon/g/guest-user.png"
     }
   ],
-  "activeLoginData": [],
+  "activeLoginData": [
+    {
+      "id": "1714049831623",
+      "active": false,
+      "userName": "NickName",
+      "email": "name@gmail.com",
+      "age": "14",
+      "password": "123456",
+      "country": "Finland",
+      "posts": ["1714485495944"],
+      "image": "https://www.computerhope.com/jargon/g/guest-user.png"
+    }
+  ],
   "technicaData": [
     {
       "id": "1714485488651",
@@ -1325,5 +1335,6 @@
       "username": "NickName"
     }
   ],
-  "recipeData": []
+  "recipeData": [],
+  "messagesData": []
 }

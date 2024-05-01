@@ -33,6 +33,9 @@ const NavBar = () => {
           <NavLink className="nav-link" to="/contact">
             Contact Us
           </NavLink>
+          <NavLink className="nav-link" to="/messages">
+            Messages
+          </NavLink>
         </div>
         {activeData.length === 0 ? (
           <div className="nav-login-reg">

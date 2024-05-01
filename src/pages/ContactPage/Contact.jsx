@@ -1,8 +1,33 @@
 import React from "react";
 import "./contact.css";
 import Logo from "../../images/RecaptchaLogo.png";
+import { useDispatch } from "react-redux";
+import { fetchAddMessages } from "../../store/Slices/MessagesSlice/API";
 
 const Contact = () => {
+  const dispatch = useDispatch();
+  const sendMessage = async (e) => {
+    e.preventDefault();
+    const {
+      name: { value: name },
+      email: { value: email },
+      subject: { value: subject },
+      message: { value: message },
+    } = e.target;
+    const newMessage = {
+      id: new Date().getTime().toString(),
+      name,
+      email,
+      verfication: false,
+      subject,
+      message,
+      image: "https://www.computerhope.com/jargon/g/guest-user.png",
+    };
+    dispatch(fetchAddMessages(newMessage));
+    e.target.reset();
+    console.log(newMessage);
+  };
+
   return (
     <div className="contact_container">
       <div className="contact_us">
@@ -30,9 +55,9 @@ const Contact = () => {
               <span>Required</span>
             </p>
           </div>
-          <form>
+          <form onSubmit={(e) => sendMessage(e)}>
             <input type="text" name="name" className="info" required />
-            <input type="text" name="address" className="info" required />
+            <input type="email" name="address" className="info" required />
             <div className="robot">
               <input type="checkbox" />
               <p>Я не робот</p>
@@ -40,9 +65,9 @@ const Contact = () => {
             </div>
             <input type="text" name="subject" className="info" required />
             <input type="text" name="message" className="message" required />
+            <button>SEND</button>
           </form>
         </div>
-        <button>SEND</button>
       </div>
     </div>
   );

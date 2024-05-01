@@ -5,6 +5,7 @@ import { allCountrySlicesReducer } from "./Slices/CountrySlice/country";
 import { postsReducer } from "./Slices/PostsSlice/postsSlice";
 import { texnikaPageReducer } from "./Slices/TexnikaSlice/texnikaPageSlice";
 import { recipePageReducer } from "./Slices/RecipSlice/recipePageSlice";
+import { messagesReducer } from "./Slices/MessagesSlice/messagesSlice";
 
 const store = configureStore({
   reducer: {
@@ -14,6 +15,7 @@ const store = configureStore({
     postsData: postsReducer,
     allTexnikaData: texnikaPageReducer,
     allRecipeData: recipePageReducer,
+    allMessagesData: messagesReducer,
   },
 });
 
