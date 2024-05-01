@@ -2,11 +2,12 @@ import React from "react";
 import "./texnikapage.css";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { selectTexnikaData } from "../../store/Slices/UsersSlice/texnikaPageSlice";
+import { selectTexnikaData } from "../../store/Slices/TexnikaSlice/texnikaPageSlice";
+
 const TexnikaPage = () => {
   const { texnikaData } = useSelector(selectTexnikaData);
-
   const navigate = useNavigate();
+
   return (
     <div className="technicaDiv">
       <div className="texnikaDesc">

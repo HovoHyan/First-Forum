@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchAddNewPost, fetchGetTexnikaData } from "./API";
+import { fetchAddNewPost } from "../PostsSlice/API";
+import { fetchGetTexnikaData } from "./API";
 
 const texnikaPageSlice = createSlice({
   name: "allTexnikaData",

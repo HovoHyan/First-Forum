@@ -3,13 +3,8 @@ import { UseRequest } from "../../../hook/UseRequest";
 
 const { POST, GET, PUT } = UseRequest();
 
-export const fetchGetAllUsers = createAsyncThunk("allUsersData/fetchGetAllUsers", async () => {
-  const result = await GET("http://localhost:3005/usersData");
-  return result;
-});
-
-export const fetchAddNewUser = createAsyncThunk("allUsersData/fetchAddNewUser", async (newUser) => {
-  const result = await POST("http://localhost:3005/usersData", newUser);
+export const fetchGetTexnikaData = createAsyncThunk("texnikaData/fetchGetTexnikaData", async () => {
+  const result = await GET("http://localhost:3005/technicaData");
   return result;
 });
 

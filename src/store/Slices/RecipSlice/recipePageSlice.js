@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchAddNewPost, fetchGetRecipeData } from "./API";
+import { fetchAddNewPost } from "../PostsSlice/API";
+import { fetchGetRecipeData } from "./API";
 
 const recipePageSlice = createSlice({
   name: "allRecipeData",

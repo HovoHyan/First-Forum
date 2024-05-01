@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 import {
-  fetchAddActiveUser,
   fetchAddNewUser,
   fetchGetAllUsers,
 } from "./API";
@@ -18,9 +17,6 @@ const usersSLice = createSlice({
     });
     builder.addCase(fetchGetAllUsers.fulfilled, (state, { payload }) => {
       state.data = payload;
-    });
-    builder.addCase(fetchAddActiveUser.fulfilled, (state, { payload }) => {
-      state.data.push(payload);
     });
   },
 });

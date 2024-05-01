@@ -1,7 +1,7 @@
 import React from "react";
 import "./profileAbout.css";
 import { useSelector } from "react-redux";
-import { selectActiveUsers } from "../../store/Slices/UsersSlice/activeUsersSlice";
+import { selectActiveUsers } from "../../store/Slices/ActiveUsersSlice/activeUsersSlice";
 
 const ProfileAbout = () => {
   const { activeData } = useSelector(selectActiveUsers);

@@ -4,7 +4,7 @@ import { selectUser } from "../../store/Slices/UsersSlice/usersSlice";
 import "./register.css";
 import { FaEyeSlash, FaEye } from "react-icons/fa";
 import { fetchAddNewUser } from "../../store/Slices/UsersSlice/API";
-import { selectCountries } from "../../store/Slices/UsersSlice/country";
+import { selectCountries } from "../../store/Slices/CountrySlice/country";
 
 const Register = () => {
   const dispatch = useDispatch();
@@ -12,7 +12,7 @@ const Register = () => {
   const [show, setShow] = useState(false);
   const [confirm, setConfirm] = useState(false);
   const { countryList } = useSelector(selectCountries);
-  console.log(countryList);
+
   const handleShow = () => {
     setShow(!show);
   };
