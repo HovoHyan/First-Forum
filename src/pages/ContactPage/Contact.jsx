@@ -25,7 +25,6 @@ const Contact = () => {
     };
     dispatch(fetchAddMessages(newMessage));
     e.target.reset();
-    console.log(newMessage);
   };
 
   return (
