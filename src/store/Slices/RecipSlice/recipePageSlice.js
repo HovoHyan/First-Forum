@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchAddNewPost } from "../PostsSlice/API";
-import { fetchGetRecipeData } from "./API";
+import { addNewRecipe, getRecipeData } from "./API";
 
 const recipePageSlice = createSlice({
   name: "allRecipeData",
@@ -11,10 +10,10 @@ const recipePageSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(fetchGetRecipeData.fulfilled, (state, { payload }) => {
+      .addCase(getRecipeData.fulfilled, (state, { payload }) => {
         state.recipeData = payload;
       })
-      .addCase(fetchAddNewPost.fulfilled, (state, { payload }) => {
+      .addCase(addNewRecipe.fulfilled, (state, { payload }) => {
         state.recipeData.push(payload.newRecipeData);
       });
   },

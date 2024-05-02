@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import {
-  fetchAddNewUser,
-  fetchGetAllUsers,
+  addNewUser,
+  getAllUsers,
 } from "./API";
 
 const usersSLice = createSlice({
@@ -12,12 +12,12 @@ const usersSLice = createSlice({
   },
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(fetchAddNewUser.fulfilled, (state, { payload }) => {
+    builder.addCase(addNewUser.fulfilled, (state, { payload }) => {
       state.data.push(payload);
-    });
-    builder.addCase(fetchGetAllUsers.fulfilled, (state, { payload }) => {
+    })
+    .addCase(getAllUsers.fulfilled, (state, { payload }) => {
       state.data = payload;
-    });
+    })
   },
 });
 

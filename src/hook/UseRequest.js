@@ -20,7 +20,6 @@ export const UseRequest = () => {
   };
 
   const PUT = async ({ url, newData }) => {
-    console.log(newData);
     const result = await fetch(url, {
       method: "PUT",
       body: JSON.stringify(newData),

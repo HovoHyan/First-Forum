@@ -26,13 +26,13 @@ const TunaTalk = () => {
     },
     {
       id: 3,
-      title: "Tuna Miscellaneous",
+      title: "Animal",
       text: "Random stuff you might use in pursuit and processing of Tuna",
       comment: 61,
       thread: "869",
       info: "Friday BFT run?",
       date: "Yesterday at 2:00 PM",
-      path: "dddd",
+      path: "animal",
     },
   ];
   return (
@@ -46,11 +46,7 @@ const TunaTalk = () => {
         </div>
         {talkForums.map((forum) => {
           return (
-            <Link
-              to={`forums/${forum.path}`}
-              key={forum.id}
-              className="tuna-talk-box"
-            >
+            <Link to={`forums/${forum.path}`} key={forum.id} className="tuna-talk-box">
               <div className="forum">
                 <div className="forum-message">
                   <img

@@ -1261,80 +1261,13 @@
       "age": "14",
       "password": "123456",
       "country": "Finland",
-      "posts": ["1714485495944"],
+      "posts": [],
       "image": "https://www.computerhope.com/jargon/g/guest-user.png"
     }
   ],
-  "activeLoginData": [
-    {
-      "id": "1714049831623",
-      "active": false,
-      "userName": "NickName",
-      "email": "name@gmail.com",
-      "age": "14",
-      "password": "123456",
-      "country": "Finland",
-      "posts": ["1714485495944"],
-      "image": "https://www.computerhope.com/jargon/g/guest-user.png"
-    }
-  ],
-  "technicaData": [
-    {
-      "id": "1714485488651",
-      "userId": "1714049831623",
-      "userAvatar": "https://www.computerhope.com/jargon/g/guest-user.png",
-      "postText": "wefsf",
-      "postDesc": "asdfasdf",
-      "theme": "Technica",
-      "postTime": "30.04.2024, 17:58:06",
-      "likes": [],
-      "username": "NickName"
-    },
-    {
-      "id": "1714485490984",
-      "userId": "1714049831623",
-      "userAvatar": "https://www.computerhope.com/jargon/g/guest-user.png",
-      "postText": "asdfasdfasd",
-      "postDesc": "fasdfasdfasdf",
-      "theme": "Technica",
-      "postTime": "30.04.2024, 17:58:06",
-      "likes": [],
-      "username": "NickName"
-    },
-    {
-      "id": "1714485492744",
-      "userId": "1714049831623",
-      "userAvatar": "https://www.computerhope.com/jargon/g/guest-user.png",
-      "postText": "asdfadsf",
-      "postDesc": "asdfasdf",
-      "theme": "Technica",
-      "postTime": "30.04.2024, 17:58:06",
-      "likes": [],
-      "username": "NickName"
-    },
-    {
-      "id": "1714485494283",
-      "userId": "1714049831623",
-      "userAvatar": "https://www.computerhope.com/jargon/g/guest-user.png",
-      "postText": "asdfadf",
-      "postDesc": "asdfasd",
-      "theme": "Technica",
-      "postTime": "30.04.2024, 17:58:06",
-      "likes": [],
-      "username": "NickName"
-    },
-    {
-      "id": "1714485495944",
-      "userId": "1714049831623",
-      "userAvatar": "https://www.computerhope.com/jargon/g/guest-user.png",
-      "postText": "sdfasdf",
-      "postDesc": "asdfasdf",
-      "theme": "Technica",
-      "postTime": "30.04.2024, 17:58:06",
-      "likes": [],
-      "username": "NickName"
-    }
-  ],
+  "activeLoginData": [],
+  "technicaData": [],
   "recipeData": [],
+  "animalData": [],
   "messagesData": []
 }

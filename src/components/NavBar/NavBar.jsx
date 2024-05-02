@@ -3,22 +3,19 @@ import "./navbar.css";
 import { Link, NavLink } from "react-router-dom";
 import { IoIosLogOut } from "react-icons/io";
 import { useEffect } from "react";
-import {
-  fetchGetActiveUsers,
-  fetchPopActiveUser,
-} from "../../store/Slices/ActiveUsersSlice/API";
+import { deleteActiveUser, getActiveUsers } from "../../store/Slices/ActiveUsersSlice/API";
 import { selectActiveUsers } from "../../store/Slices/ActiveUsersSlice/activeUsersSlice";
 
 const NavBar = () => {
   const dispatch = useDispatch();
   const { activeData } = useSelector(selectActiveUsers);
   useEffect(() => {
-    dispatch(fetchGetActiveUsers());
+    dispatch(getActiveUsers());
   }, []);
 
   const activeID = activeData.length > 0 ? activeData[0].id : null;
   const handleOut = () => {
-    dispatch(fetchPopActiveUser(activeID));
+    dispatch(deleteActiveUser(activeID));
   };
   return (
     <nav>

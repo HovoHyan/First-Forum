@@ -2,8 +2,9 @@ import React from "react";
 import "./profilePosts.css";
 import { useDispatch, useSelector } from "react-redux";
 import { selectActiveUsers } from "../../store/Slices/ActiveUsersSlice/activeUsersSlice";
-import { fetchAddNewPost } from "../../store/Slices/PostsSlice/API";
-
+import { addNewAnimal } from "../../store/Slices/AnimalSlice/API";
+import { addNewRecipe } from "../../store/Slices/RecipSlice/API";
+import { addNewPost } from "../../store/Slices/TexnikaSlice/API";
 
 const ProfilePosts = () => {
   const { activeData } = useSelector(selectActiveUsers);
@@ -28,7 +29,17 @@ const ProfilePosts = () => {
       likes: [],
       username: activeData[0]?.userName,
     };
-    dispatch(fetchAddNewPost({ data: newPost, activeUser: activeData[0] }));
+    switch (newPost.theme) {
+      case "Technica":
+        dispatch(addNewPost({ data: newPost, activeUser: activeData[0] }));
+        break;
+      case "Animal":
+        dispatch(addNewAnimal({ data: newPost, activeUser: activeData[0] }));
+        break;
+      case "Recipe":
+        dispatch(addNewRecipe({ data: newPost, activeUser: activeData[0] }));
+        break;
+    }
     e.target.reset();
   };
 
@@ -41,6 +52,8 @@ const ProfilePosts = () => {
           <textarea type="text" placeholder="Write a theme name" className="post-textArea" name="postDesc"></textarea>
           <select name="theme" className="select-theme">
             <option>Technica</option>
+            <option>Recipe</option>
+            <option>Animal</option>
           </select>
           <button className="login-button">Submit Post</button>
         </form>

@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchAddNewPost } from "../PostsSlice/API";
-import { fetchGetTexnikaData } from "./API";
+import { addNewPost, getTexnikaData } from "./API";
 
 const texnikaPageSlice = createSlice({
   name: "allTexnikaData",
@@ -11,10 +10,10 @@ const texnikaPageSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder
-      .addCase(fetchGetTexnikaData.fulfilled, (state, { payload }) => {
+      .addCase(getTexnikaData.fulfilled, (state, { payload }) => {
         state.texnikaData = payload;
       })
-      .addCase(fetchAddNewPost.fulfilled, (state, { payload }) => {
+      .addCase(addNewPost.fulfilled, (state, { payload }) => {
         state.texnikaData.push(payload.newTexnikData);
       });
   },

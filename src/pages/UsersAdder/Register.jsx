@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { selectUser } from "../../store/Slices/UsersSlice/usersSlice";
 import "./register.css";
 import { FaEyeSlash, FaEye } from "react-icons/fa";
-import { fetchAddNewUser } from "../../store/Slices/UsersSlice/API";
+import { addNewUser } from "../../store/Slices/UsersSlice/API";
 import { selectCountries } from "../../store/Slices/CountrySlice/country";
 
 const Register = () => {
@@ -47,7 +47,7 @@ const Register = () => {
         posts: [],
         image: "https://www.computerhope.com/jargon/g/guest-user.png",
       };
-      dispatch(fetchAddNewUser(newUser));
+      dispatch(addNewUser(newUser));
       e.target.reset();
     } else {
       e.target.checkPassword.value = "";

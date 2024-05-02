@@ -14,6 +14,8 @@ const Contact = () => {
       subject: { value: subject },
       message: { value: message },
     } = e.target;
+
+    console.log(name);
     const newMessage = {
       id: new Date().getTime().toString(),
       name,
@@ -23,6 +25,7 @@ const Contact = () => {
       message,
       image: "https://www.computerhope.com/jargon/g/guest-user.png",
     };
+    console.log(newMessage);
     dispatch(fetchAddMessages(newMessage));
     e.target.reset();
   };
@@ -56,7 +59,7 @@ const Contact = () => {
           </div>
           <form onSubmit={(e) => sendMessage(e)}>
             <input type="text" name="name" className="info" required />
-            <input type="email" name="address" className="info" required />
+            <input type="email" name="email" className="info" required />
             <div className="robot">
               <input type="checkbox" />
               <p>Я не робот</p>

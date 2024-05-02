@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import "./loginPage.css";
 import { selectUser } from "../../store/Slices/UsersSlice/usersSlice";
-import { fetchAddActiveUser } from "../../store/Slices/ActiveUsersSlice/API";
+import { addActiveUser } from "../../store/Slices/ActiveUsersSlice/API";
 import { useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
@@ -15,13 +15,12 @@ const LoginPage = () => {
       login: { value: login },
       password: { value: password },
     } = e.target;
-    console.log(login, password);
     const loginUser = data.find(
       (el) => el.userName === login && el.password === password
     );
 
     if (loginUser) {
-      dispatch(fetchAddActiveUser(loginUser));
+      dispatch(addActiveUser(loginUser));
       navigate("/profile");
       console.log(loginUser);
     }

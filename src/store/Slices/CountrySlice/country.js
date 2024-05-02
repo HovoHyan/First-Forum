@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchGetAllCountries } from "./API";
+import { getAllCountries } from "./API";
 
 const allCountrySlices = createSlice({
   name: "countryData",
@@ -9,7 +9,7 @@ const allCountrySlices = createSlice({
   },
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(fetchGetAllCountries.fulfilled, (state, { payload }) => {
+    builder.addCase(getAllCountries.fulfilled, (state, { payload }) => {
       state.countryList = payload;
     });
   },

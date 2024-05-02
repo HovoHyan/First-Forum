@@ -1,24 +1,23 @@
 import React from "react";
-import "./recipepage.css";
+import "./animalPage.css";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { selectRecipeData } from "../../store/Slices/RecipSlice/recipePageSlice";
+import { selectAnimalData } from "../../store/Slices/AnimalSlice/animalPageSlice";
+const AnimalPage = () => {
+  const { animalData } = useSelector(selectAnimalData);
 
-const RecipePage = () => {
-  const { recipeData } = useSelector(selectRecipeData);
   const navigate = useNavigate();
-
   return (
     <div className="technicaDiv">
       <div className="texnikaDesc">
-        <h1 className="texnika-main-text">Recipes</h1>
-        <p className="texnika-secondary-text">you can write here about Recipes</p>
+        <h1 className="texnika-main-text">Animal</h1>
+        <p className="texnika-secondary-text">you can write here about Technica</p>
       </div>
       <p onClick={() => navigate(-1)} className="goBackBtn">
         Go Back
       </p>
       <div className="main-texnika-box">
-        {recipeData.map((texnika) => {
+        {animalData.map((texnika) => {
           return (
             <div className="texnika-card">
               <div className="texnika-card-first">
@@ -42,4 +41,4 @@ const RecipePage = () => {
   );
 };
 
-export default RecipePage;
+export default AnimalPage;
