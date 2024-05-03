@@ -22,7 +22,6 @@ const LoginPage = () => {
     if (loginUser) {
       dispatch(addActiveUser(loginUser));
       navigate("/profile");
-      console.log(loginUser);
     }
     e.target.reset();
   };

@@ -7,12 +7,13 @@ import { selectTexnikaData } from "../../store/Slices/TexnikaSlice/texnikaPageSl
 const TexnikaPage = () => {
   const { texnikaData } = useSelector(selectTexnikaData);
   const navigate = useNavigate();
-
   return (
     <div className="technicaDiv">
       <div className="texnikaDesc">
         <h1 className="texnika-main-text">Texnika</h1>
-        <p className="texnika-secondary-text">you can write here about Technica</p>
+        <p className="texnika-secondary-text">
+          you can write here about Technica
+        </p>
       </div>
       <p onClick={() => navigate(-1)} className="goBackBtn">
         Go Back
@@ -22,7 +23,12 @@ const TexnikaPage = () => {
           return (
             <div className="texnika-card">
               <div className="texnika-card-first">
-                <img src={texnika?.userAvatar} alt="User" width={40} height={40} />
+                <img
+                  src={texnika?.userAvatar}
+                  alt="User"
+                  width={40}
+                  height={40}
+                />
                 <div className="texnika-card-text">
                   <p className="postText">{texnika?.postText}</p>
                   <p className="postDesc">{texnika?.username}</p>

@@ -129,13 +129,20 @@
 }
 
 .message {
-  height: 109px;
+  max-width: 500px;
+  min-height: 70px;
+  max-height: 100px;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  border: 1px solid #c6c9cf;
+  background-color: #e2e4e8;
+  font-size: 14px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .contact_us button {
   transition: all 0.2s;
   cursor: pointer;
-  margin: 5px 0 0 280px;
   width: 154px;
   height: 39px;
   border: 2px solid rgb(206 24 31);

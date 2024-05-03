@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchAddMessages } from "./API";
+import { fetchAddMessages, fetchGetMessages } from "./API";
 
-const messagesData = createSlice({
+const messagesDataSlice = createSlice({
   name: "allMessagesData",
   initialState: {
     isLoading: false,
@@ -9,10 +9,14 @@ const messagesData = createSlice({
   },
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(fetchAddMessages.fulfilled, (state, { payload }) => {
-      state.messagesData.push(payload);
-    });
+    builder
+      .addCase(fetchGetMessages.fulfilled, (state, { payload }) => {
+        state.messagesData = payload;
+      })
+      .addCase(fetchAddMessages.fulfilled, (state, { payload }) => {
+        state.messagesData.push(payload.newMessageData);
+      });
   },
 });
 export const selectMessagesData = (state) => state.allMessagesData;
-export const messagesReducer = messagesData.reducer;
+export const messagesReducer = messagesDataSlice.reducer;

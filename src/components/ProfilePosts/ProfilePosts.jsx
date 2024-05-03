@@ -48,8 +48,19 @@ const ProfilePosts = () => {
       <div className="posts">
         <img src={activeData[0]?.image} alt="User" />
         <form className="post-write" onSubmit={submitPost}>
-          <input type="text" placeholder="Write a theme name" className="status" name="postText" required />
-          <textarea type="text" placeholder="Write a theme name" className="post-textArea" name="postDesc"></textarea>
+          <input
+            type="text"
+            placeholder="Write a theme name"
+            className="status"
+            name="postText"
+            required
+          />
+          <textarea
+            type="text"
+            placeholder="Write a theme"
+            className="post-textArea"
+            name="postDesc"
+          ></textarea>
           <select name="theme" className="select-theme">
             <option>Technica</option>
             <option>Recipe</option>
@@ -58,7 +69,9 @@ const ProfilePosts = () => {
           <button className="login-button">Submit Post</button>
         </form>
       </div>
-      <p className="posts-text">There are no messages on {activeData[0]?.userName}'s profile yet.</p>
+      <p className="posts-text">
+        There are no messages on {activeData[0]?.userName}'s profile yet.
+      </p>
     </div>
   );
 };

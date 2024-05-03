@@ -14,18 +14,15 @@ const Contact = () => {
       subject: { value: subject },
       message: { value: message },
     } = e.target;
-
-    console.log(name);
     const newMessage = {
       id: new Date().getTime().toString(),
       name,
       email,
-      verfication: false,
+      verification: false,
       subject,
       message,
       image: "https://www.computerhope.com/jargon/g/guest-user.png",
     };
-    console.log(newMessage);
     dispatch(fetchAddMessages(newMessage));
     e.target.reset();
   };
@@ -66,7 +63,13 @@ const Contact = () => {
               <img src={Logo} alt="Logo" />
             </div>
             <input type="text" name="subject" className="info" required />
-            <input type="text" name="message" className="message" required />
+            <textarea
+              type="text"
+              name="message"
+              className="message"
+              required
+            ></textarea>
+
             <button>SEND</button>
           </form>
         </div>
