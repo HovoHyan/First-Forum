@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { addNewAnimal } from "../AnimalSlice/API";
 import { addNewRecipe } from "../RecipSlice/API";
 import { addNewPost } from "../TexnikaSlice/API";
-import { addActiveUser, deleteActiveUser, getActiveUsers } from "./API";
+import { addActiveUser, changeActiveAvatar, deleteActiveUser, getActiveUsers } from "./API";
 
 const activeUsersSLice = createSlice({
   name: "activeUsersData",
@@ -30,6 +30,9 @@ const activeUsersSLice = createSlice({
       })
       .addCase(addNewAnimal.fulfilled, (state, { payload }) => {
         state.activeData[0] = payload.result3;
+      })
+      .addCase(changeActiveAvatar.fulfilled, (state, { payload }) => {
+        state.activeData[0] = payload.result;
       })
 
   },

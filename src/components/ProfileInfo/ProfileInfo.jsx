@@ -1,10 +1,28 @@
-import React from "react";
+import React, { useState } from "react";
 import "./profileInfo.css";
-import { useSelector } from "react-redux";
+import EditIcon from "../../Assets/Edit.png";
+import { useDispatch, useSelector } from "react-redux";
 import { selectActiveUsers } from "../../store/Slices/ActiveUsersSlice/activeUsersSlice";
+import { changeActiveAvatar } from "../../store/Slices/ActiveUsersSlice/API";
 
 const ProfileInfo = () => {
   const { activeData } = useSelector(selectActiveUsers);
+  const dispatch = useDispatch();
+  const [newImg, setNewImg] = useState("");
+  const [change, setChange] = useState(false);
+
+  const createImg = (e) => {
+    setChange(!change);
+    const files = e.target.files;
+    if (files && files.length > 0) {
+      const reader = new FileReader();
+      reader.readAsDataURL(files[0]);
+      reader.onload = () => {
+        setNewImg(reader.result);
+        dispatch(changeActiveAvatar({ data: reader.result, activeUser: activeData[0] }));
+      };
+    }
+  };
 
   return (
     <div className="user-profile">
@@ -12,9 +30,19 @@ const ProfileInfo = () => {
         <div className="user-image">
           <img
             src={activeData[0]?.image}
-            alt=""
+            alt="User"
             style={{ width: "200px", height: "200px", borderRadius: "50%" }}
           />
+          {change ? (
+            <input type="file" onChange={createImg} required />
+          ) : (
+            <img
+              src={EditIcon}
+              alt="Edit"
+              className="edit_Icon"
+              onClick={createImg}
+            />
+          )}
         </div>
         <div className="user-info">
           <p className="user-name">{activeData[0]?.userName}</p>

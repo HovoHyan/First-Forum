@@ -12,3 +12,4 @@ export const addNewUser = createAsyncThunk("allUsersData/addNewUser", async (new
   const result = await POST("http://localhost:3005/usersData", newUser);
   return result;
 });
+
