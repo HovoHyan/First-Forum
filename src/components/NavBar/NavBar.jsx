@@ -2,9 +2,13 @@ import { useSelector, useDispatch } from "react-redux";
 import "./navbar.css";
 import { Link, NavLink } from "react-router-dom";
 import { IoIosLogOut } from "react-icons/io";
-import { useEffect } from "react";
-import { deleteActiveUser, getActiveUsers } from "../../store/Slices/ActiveUsersSlice/API";
+import { useEffect, useState } from "react";
+import {
+  deleteActiveUser,
+  getActiveUsers,
+} from "../../store/Slices/ActiveUsersSlice/API";
 import { selectActiveUsers } from "../../store/Slices/ActiveUsersSlice/activeUsersSlice";
+import { IoMdSearch } from "react-icons/io";
 
 const NavBar = () => {
   const dispatch = useDispatch();
@@ -13,6 +17,10 @@ const NavBar = () => {
     dispatch(getActiveUsers());
   }, []);
 
+  const [search, setSearch] = useState(false);
+  const searchToggle = () => {
+    setSearch(!search);
+  };
   const activeID = activeData.length > 0 ? activeData[0].id : null;
   const handleOut = () => {
     dispatch(deleteActiveUser(activeID));
@@ -58,6 +66,11 @@ const NavBar = () => {
 
             <p>|</p>
             <IoIosLogOut className="log-out" onClick={handleOut} />
+            {search ? (
+              <input type="text" />
+            ) : (
+              <IoMdSearch className="search-icon" onClick={searchToggle} />
+            )}
           </div>
         )}
       </div>

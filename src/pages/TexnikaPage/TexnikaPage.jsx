@@ -6,6 +6,7 @@ import { selectTexnikaData } from "../../store/Slices/TexnikaSlice/texnikaPageSl
 
 const TexnikaPage = () => {
   const { texnikaData } = useSelector(selectTexnikaData);
+  // const sortedTexnikaData = texnikaData.sort((a, b) => a.postTime - b.postTime);
   const navigate = useNavigate();
   return (
     <div className="technicaDiv">

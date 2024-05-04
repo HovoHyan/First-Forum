@@ -20,12 +20,16 @@ import { selectActiveUsers } from "../store/Slices/ActiveUsersSlice/activeUsersS
 import MessagesPage from "../pages/MessagesPage/MessagesPage";
 import AnimalPage from "../pages/AnimalPage/AnimalPage";
 import { fetchGetMessages } from "../store/Slices/MessagesSlice/API";
+import { getRecipeData } from "../store/Slices/RecipSlice/API";
+import { getAnimalData } from "../store/Slices/AnimalSlice/API";
 
 const AppRouter = () => {
   const dispatch = useDispatch();
   const { activeData } = useSelector(selectActiveUsers);
   useEffect(() => {
     dispatch(getTexnikaData());
+    dispatch(getRecipeData());
+    dispatch(getAnimalData());
     dispatch(getActiveUsers());
     dispatch(getAllUsers());
     dispatch(getAllCountries());
