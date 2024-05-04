@@ -1,0 +1,66 @@
+[33mcommit 1fa4d4c1446d1cdb1a94b1341bdcde993c09d32f[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mbranchDavit[m[33m, [m[1;32mrecover-branch[m[33m)[m
+Reflog: HEAD@{0} (Dav-Sargsyan <davidsargsyan987@gmail.com>)
+Reflog message: commit: fsfs
+Author: Dav-Sargsyan <davidsargsyan987@gmail.com>
+Date:   Sat May 4 01:22:02 2024 +0400
+
+    fsfs
+
+[33mcommit 887453af67a2ba72c653f597ea10a3898263ddb8[m
+Reflog: HEAD@{1} (Dav-Sargsyan <davidsargsyan987@gmail.com>)
+Reflog message: commit: dadada
+Author: Dav-Sargsyan <davidsargsyan987@gmail.com>
+Date:   Sat May 4 01:20:04 2024 +0400
+
+    dadada
+
+[33mcommit 22fd0b032372666518c6c996aeb6be051db97b78[m
+Reflog: HEAD@{2} (Dav-Sargsyan <davidsargsyan987@gmail.com>)
+Reflog message: checkout: moving from main to branchDavit
+Author: Dav-Sargsyan <davidsargsyan987@gmail.com>
+Date:   Wed May 1 23:54:56 2024 +0400
+
+    last
+
+[33mcommit 2829ccdb899ace14d6d59ec5b51b5a96e9610739[m[33m ([m[1;32mmain[m[33m)[m
+Reflog: HEAD@{3} (Dav-Sargsyan <davidsargsyan987@gmail.com>)
+Reflog message: commit: nnnn\
+Author: Dav-Sargsyan <davidsargsyan987@gmail.com>
+Date:   Sat May 4 01:15:08 2024 +0400
+
+    nnnn\
+
+[33mcommit 26b9e1deacbb2f7127cab8451c5bb31ab80be6f4[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Reflog: HEAD@{4} (Dav-Sargsyan <davidsargsyan987@gmail.com>)
+Reflog message: pull origin main: Fast-forward
+Author: Hovo Harutyunyan <hovohyan16@gmail.com>
+Date:   Fri May 3 21:13:23 2024 +0400
+
+    Avatar Changer
+
+[33mcommit 8d668d94545ff645b5907c554efa1abde71c4443[m
+Reflog: HEAD@{5} (Dav-Sargsyan <davidsargsyan987@gmail.com>)
+Reflog message: commit: last
+Author: Dav-Sargsyan <davidsargsyan987@gmail.com>
+Date:   Thu May 2 07:56:20 2024 +0400
+
+    last
+
+[33mcommit 22fd0b032372666518c6c996aeb6be051db97b78[m
+Reflog: HEAD@{6} (Dav-Sargsyan <davidsargsyan987@gmail.com>)
+Reflog message: commit: last
+Author: Dav-Sargsyan <davidsargsyan987@gmail.com>
+Date:   Wed May 1 23:54:56 2024 +0400
+
+    last
+
+[33mcommit a4012af388c9d66d0ddb5e851d4fb85af8baf362[m
+Reflog: HEAD@{7} (Dav-Sargsyan <davidsargsyan987@gmail.com>)
+Reflog message: clone: from https://github.com/HovoHyan/First-Forum.git
+Merge: c169163 89866b9
+Author: HovoHyan <162144140+HovoHyan@users.noreply.github.com>
+Date:   Wed May 1 21:45:22 2024 +0400
+
+    Merge pull request #8 from HovoHyan/branchRaz
+    
+    All Slices Update

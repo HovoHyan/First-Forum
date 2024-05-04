@@ -19,6 +19,7 @@ import RecipePage from "../pages/RecipePage/RecipePage";
 import { selectActiveUsers } from "../store/Slices/ActiveUsersSlice/activeUsersSlice";
 import MessagesPage from "../pages/MessagesPage/MessagesPage";
 import AnimalPage from "../pages/AnimalPage/AnimalPage";
+import { fetchGetMessages } from "../store/Slices/MessagesSlice/API";
 
 const AppRouter = () => {
   const dispatch = useDispatch();
@@ -28,14 +29,19 @@ const AppRouter = () => {
     dispatch(getActiveUsers());
     dispatch(getAllUsers());
     dispatch(getAllCountries());
+    dispatch(fetchGetMessages());
   }, []);
   return (
     <div>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
-          {activeData.length < 1 && <Route path="register" element={<Register />} />}
-          {activeData.length < 1 && <Route path="login" element={<LoginPage />} />}
+          {activeData.length < 1 && (
+            <Route path="register" element={<Register />} />
+          )}
+          {activeData.length < 1 && (
+            <Route path="login" element={<LoginPage />} />
+          )}
           <Route path="contact" element={<Contact />} />
           <Route path="messages" element={<MessagesPage />} />
           {activeData.length > 0 && (
