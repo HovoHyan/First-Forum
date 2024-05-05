@@ -22,6 +22,7 @@ import AnimalPage from "../pages/AnimalPage/AnimalPage";
 import { fetchGetMessages } from "../store/Slices/MessagesSlice/API";
 import { getRecipeData } from "../store/Slices/RecipSlice/API";
 import { getAnimalData } from "../store/Slices/AnimalSlice/API";
+import AdminPage from "../pages/AdminPage/AdminPage";
 
 const AppRouter = () => {
   const dispatch = useDispatch();
@@ -40,12 +41,8 @@ const AppRouter = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
-          {activeData.length < 1 && (
-            <Route path="register" element={<Register />} />
-          )}
-          {activeData.length < 1 && (
-            <Route path="login" element={<LoginPage />} />
-          )}
+          {activeData.length < 1 && <Route path="register" element={<Register />} />}
+          {activeData.length < 1 && <Route path="login" element={<LoginPage />} />}
           <Route path="contact" element={<Contact />} />
           <Route path="messages" element={<MessagesPage />} />
           {activeData.length > 0 && (
@@ -55,6 +52,7 @@ const AppRouter = () => {
               <Route path="postings" element={<ProfilePostings />} />
             </Route>
           )}
+          <Route path="admin" element={<AdminPage />} />
           <Route path="forums">
             <Route path="texnika" element={<TexnikaPage />} />
             <Route path="recipe" element={<RecipePage />} />

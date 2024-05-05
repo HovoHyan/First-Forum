@@ -15,9 +15,7 @@ const LoginPage = () => {
       login: { value: login },
       password: { value: password },
     } = e.target;
-    const loginUser = data.find(
-      (el) => el.userName === login && el.password === password
-    );
+    const loginUser = data.find((el) => el.userName === login && el.password === password);
 
     if (loginUser) {
       dispatch(addActiveUser(loginUser));
@@ -32,20 +30,8 @@ const LoginPage = () => {
         <h2 className="login-text"> Log in </h2>
         <form className="form-inputs" onSubmit={handleCheck}>
           <div className="inputs-div">
-            <input
-              className="login-input"
-              type="text"
-              placeholder="UserName"
-              name="login"
-              required
-            />
-            <input
-              className="login-input"
-              placeholder="Password"
-              name="password"
-              required
-              type="password"
-            />
+            <input className="login-input" type="text" placeholder="UserName" name="login" required />
+            <input className="login-input" placeholder="Password" name="password" required type="password" />
           </div>
           <div className="links">
             <a href="#">Forgot Password?</a> <a href="/register">Register</a>

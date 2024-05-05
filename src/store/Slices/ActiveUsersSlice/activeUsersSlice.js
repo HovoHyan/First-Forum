@@ -2,7 +2,13 @@ import { createSlice } from "@reduxjs/toolkit";
 import { addNewAnimal } from "../AnimalSlice/API";
 import { addNewRecipe } from "../RecipSlice/API";
 import { addNewPost } from "../TexnikaSlice/API";
-import { addActiveUser, changeActiveAvatar, deleteActiveUser, getActiveUsers } from "./API";
+import {
+  addActiveUser,
+  changeActiveAvatar,
+  deleteActiveUser,
+  getActiveUsers,
+  outActiveUser,
+} from "./API";
 
 const activeUsersSLice = createSlice({
   name: "activeUsersData",
@@ -14,13 +20,13 @@ const activeUsersSLice = createSlice({
   extraReducers: (builder) => {
     builder
       .addCase(addActiveUser.fulfilled, (state, { payload }) => {
-        state.activeData.push(payload);
+        state.activeData.push(payload.result);
       })
       .addCase(getActiveUsers.fulfilled, (state, { payload }) => {
         state.activeData = payload;
       })
-      .addCase(deleteActiveUser.fulfilled, (state, { payload }) => {
-        state.activeData.pop(payload);
+      .addCase(outActiveUser.fulfilled, (state, { payload }) => {
+        state.activeData.pop();
       })
       .addCase(addNewPost.fulfilled, (state, { payload }) => {
         state.activeData[0] = payload.result3;
@@ -34,7 +40,9 @@ const activeUsersSLice = createSlice({
       .addCase(changeActiveAvatar.fulfilled, (state, { payload }) => {
         state.activeData[0] = payload.result;
       })
-
+      .addCase(deleteActiveUser.fulfilled, (state, { payload }) => {
+        state.activeData.pop();
+      });
   },
 });
 export const selectActiveUsers = (state) => state.activeUsersData;

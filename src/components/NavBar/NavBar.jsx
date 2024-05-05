@@ -4,15 +4,20 @@ import { Link, NavLink } from "react-router-dom";
 import { IoIosLogOut } from "react-icons/io";
 import { useEffect, useState } from "react";
 import {
-  deleteActiveUser,
   getActiveUsers,
+  outActiveUser,
 } from "../../store/Slices/ActiveUsersSlice/API";
 import { selectActiveUsers } from "../../store/Slices/ActiveUsersSlice/activeUsersSlice";
+import { selectUser } from "../../store/Slices/UsersSlice/usersSlice";
 import { IoMdSearch } from "react-icons/io";
 
 const NavBar = () => {
   const dispatch = useDispatch();
   const { activeData } = useSelector(selectActiveUsers);
+  const { data } = useSelector(selectUser);
+  const activeID = activeData.length > 0 ? activeData[0].id : null;
+  const loginUser = data.find((el) => el.id === activeID);
+
   useEffect(() => {
     dispatch(getActiveUsers());
   }, []);
@@ -21,9 +26,8 @@ const NavBar = () => {
   const searchToggle = () => {
     setSearch(!search);
   };
-  const activeID = activeData.length > 0 ? activeData[0].id : null;
   const handleOut = () => {
-    dispatch(deleteActiveUser(activeID));
+    dispatch(outActiveUser(loginUser));
   };
   return (
     <nav>
@@ -40,6 +44,9 @@ const NavBar = () => {
           </NavLink>
           <NavLink className="nav-link" to="/messages">
             Messages
+          </NavLink>
+          <NavLink className="nav-link" to="/admin">
+            Admin
           </NavLink>
         </div>
         {activeData.length === 0 ? (
@@ -66,11 +73,7 @@ const NavBar = () => {
 
             <p>|</p>
             <IoIosLogOut className="log-out" onClick={handleOut} />
-            {search ? (
-              <input type="text" />
-            ) : (
-              <IoMdSearch className="search-icon" onClick={searchToggle} />
-            )}
+            {search ? <input type="text" /> : <IoMdSearch className="search-icon" onClick={searchToggle} />}
           </div>
         )}
       </div>
