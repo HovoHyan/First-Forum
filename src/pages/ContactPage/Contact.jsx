@@ -56,7 +56,7 @@ const Contact = () => {
           </div>
           <form onSubmit={(e) => sendMessage(e)}>
             <input type="text" name="name" className="info" required />
-            <input type="email" name="email" className="info" required />
+            <input type="text" name="email" className="info" required />
             <div className="robot">
               <input type="checkbox" />
               <p>Я не робот</p>

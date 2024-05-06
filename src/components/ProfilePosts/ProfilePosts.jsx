@@ -5,6 +5,8 @@ import { selectActiveUsers } from "../../store/Slices/ActiveUsersSlice/activeUse
 import { addNewAnimal } from "../../store/Slices/AnimalSlice/API";
 import { addNewRecipe } from "../../store/Slices/RecipSlice/API";
 import { addNewPost } from "../../store/Slices/TexnikaSlice/API";
+import { addNewTour } from "../../store/Slices/TourSlice/API";
+import { addNewCar } from "../../store/Slices/CarSlice/API";
 
 const ProfilePosts = () => {
   const { activeData } = useSelector(selectActiveUsers);
@@ -39,6 +41,12 @@ const ProfilePosts = () => {
       case "Recipe":
         dispatch(addNewRecipe({ data: newPost, activeUser: activeData[0] }));
         break;
+      case "Tour":
+        dispatch(addNewTour({ data: newPost, activeUser: activeData[0] }));
+        break;
+      case "Car":
+        dispatch(addNewCar({ data: newPost, activeUser: activeData[0] }));
+        break;
     }
     e.target.reset();
   };
@@ -61,16 +69,20 @@ const ProfilePosts = () => {
             className="post-textArea"
             name="postDesc"
           ></textarea>
-          <select name="theme" className="select-theme">
-            <option>Technica</option>
-            <option>Recipe</option>
-            <option>Animal</option>
-          </select>
+          <div className="select-theme-box">
+            <select name="theme" className="select-theme">
+              <option>Technica</option>
+              <option>Recipe</option>
+              <option>Animal</option>
+              <option>Tour</option>
+              <option>Car</option>
+            </select>
+          </div>
           <button className="login-button">Submit Post</button>
         </form>
       </div>
       <p className="posts-text">
-        There are no messages on {activeData[0]?.userName}'s profile yet.
+        There are no posts on {activeData[0]?.userName}'s profile yet.
       </p>
     </div>
   );

@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchAddMessages, fetchGetMessages } from "./API";
+import { fetchAddMessages, fetchDeleteMessages, fetchGetMessages } from "./API";
 
 const messagesDataSlice = createSlice({
   name: "allMessagesData",
@@ -15,6 +15,11 @@ const messagesDataSlice = createSlice({
       })
       .addCase(fetchAddMessages.fulfilled, (state, { payload }) => {
         state.messagesData.push(payload.newMessageData);
+      })
+      .addCase(fetchDeleteMessages.fulfilled, (state, { payload }) => {
+        state.messagesData = state.messagesData.filter(
+          (message) => message.id !== payload
+        );
       });
   },
 });

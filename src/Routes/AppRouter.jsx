@@ -23,6 +23,11 @@ import { fetchGetMessages } from "../store/Slices/MessagesSlice/API";
 import { getRecipeData } from "../store/Slices/RecipSlice/API";
 import { getAnimalData } from "../store/Slices/AnimalSlice/API";
 import AdminPage from "../pages/AdminPage/AdminPage";
+import TourPage from "../pages/TourPage/TourPage";
+import { getTourData } from "../store/Slices/TourSlice/API";
+import { getCarData } from "../store/Slices/CarSlice/API";
+import CarPage from "../pages/CarPage/CarPage";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 const AppRouter = () => {
   const dispatch = useDispatch();
@@ -31,6 +36,8 @@ const AppRouter = () => {
     dispatch(getTexnikaData());
     dispatch(getRecipeData());
     dispatch(getAnimalData());
+    dispatch(getTourData());
+    dispatch(getCarData());
     dispatch(getActiveUsers());
     dispatch(getAllUsers());
     dispatch(getAllCountries());
@@ -41,8 +48,12 @@ const AppRouter = () => {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<HomePage />} />
-          {activeData.length < 1 && <Route path="register" element={<Register />} />}
-          {activeData.length < 1 && <Route path="login" element={<LoginPage />} />}
+          {activeData.length < 1 && (
+            <Route path="register" element={<Register />} />
+          )}
+          {activeData.length < 1 && (
+            <Route path="login" element={<LoginPage />} />
+          )}
           <Route path="contact" element={<Contact />} />
           <Route path="messages" element={<MessagesPage />} />
           {activeData.length > 0 && (
@@ -57,8 +68,10 @@ const AppRouter = () => {
             <Route path="texnika" element={<TexnikaPage />} />
             <Route path="recipe" element={<RecipePage />} />
             <Route path="animal" element={<AnimalPage />} />
+            <Route path="tour" element={<TourPage />} />
+            <Route path="car" element={<CarPage />} />
           </Route>
-          <Route path="*" element={<h1>Not Found</h1>} />
+          <Route path="*" element={<ErrorPage />} />
         </Route>
       </Routes>
     </div>

@@ -1,5 +1,5 @@
 .message-page-container {
-  width: 1000px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
@@ -77,20 +77,6 @@
   gap: 10px;
 }
 
-.delete-btn {
-  padding: 10px 40px;
-  border: 1px solid red;
-  background-color: #e2e4e8;
-  color: red;
-  font-size: 15px;
-  cursor: pointer;
-  transition: 0.3s all;
-}
-.delete-btn:hover {
-  background-color: red;
-  color: #e2e4e8;
-}
-
 .answer-btn {
   padding: 10px 40px;
   border: 1px solid #2c9caf;
@@ -102,4 +88,57 @@
 .answer-btn:hover {
   background-color: #2c9caf;
   color: #e2e4e8;
+}
+
+.delete-icon {
+  width: 30px;
+  height: 30px;
+  margin-top: 63px;
+  margin-left: -50px;
+}
+
+.delete-btn {
+  background-color: #cdc7e5;
+  border: none;
+  cursor: pointer;
+  background: #2c9caf;
+  color: white;
+  width: 150px;
+  height: 40px;
+  overflow: hidden;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 600;
+  transition: 0.2s;
+  cursor: pointer;
+  border-radius: 3px;
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btn-two {
+  position: relative;
+  width: 210px;
+  height: 150px;
+  margin-top: -85px;
+  padding-top: 10px;
+  background: red;
+  right: -250px;
+  transition: 0.3s;
+}
+
+.btn-text {
+  color: white;
+  position: relative;
+  bottom: -30%;
+  transition: 0.3s;
+}
+
+.delete-btn:hover .btn-two {
+  right: 0px;
+}
+.delete-btn:hover .btn-text {
+  margin-right: 65px;
+}
+.delete-btn:active {
+  box-shadow: 0px 5px 6px rgba(0, 0, 0, 0.3);
 }

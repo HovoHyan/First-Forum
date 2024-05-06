@@ -1,0 +1,129 @@
+.car-main-text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 38px;
+}
+.car-secondary-text {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.technicaDiv {
+  margin: 0 auto;
+  width: 1200px;
+  padding-top: 70px;
+}
+
+.main-car-box {
+  width: 1200px;
+  min-height: 700px;
+  margin-bottom: 100px;
+  background-color: rgb(39, 38, 38);
+  border-radius: 10px;
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.car-card {
+  width: 90%;
+  min-height: 70px;
+  background-color: #d7d9dd;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-between;
+  transition: 0.5s;
+}
+.car-card:hover {
+  transform: scale(1.05);
+}
+
+.car-card-first {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.postText {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.postDesc {
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(73, 71, 71);
+  font-size: 13px;
+}
+
+.card-end-text {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card-end {
+  display: flex;
+  gap: 10px;
+}
+
+.go-back {
+  position: relative;
+  left: 9%;
+  transform: translate(-50%, -50%);
+  margin-top: 70px;
+  width: 200px;
+}
+
+.back-btn {
+  position: relative;
+}
+
+.goBackBtn {
+  font-family: Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  display: block;
+  padding: 10px;
+  font-weight: bold;
+  text-decoration: none;
+  background: #333;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 3px solid #333;
+  transition: all 0.35s;
+}
+
+.goBackBtn:hover {
+  border: 3px solid #2c9caf;
+  background: transparent;
+  color: #2c9caf;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  border: 3px solid transparent;
+  position: relative;
+  transform: rotate(45deg);
+  left: 0;
+  bottom: 40px;
+  z-index: -1;
+  transition: all 0.35s;
+}
+
+.icon svg {
+  width: 27px;
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 13px);
+  transform: rotate(135deg);
+  fill: #2c9caf;
+  transition: all 0.35s;
+}
+
+.goBackBtn:hover + .icon {
+  border: 3px solid #2c9caf;
+  left: -18%;
+}

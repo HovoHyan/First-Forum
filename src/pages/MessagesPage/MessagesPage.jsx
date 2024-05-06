@@ -1,11 +1,15 @@
 import React from "react";
 import "./messagesPage.css";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { selectMessagesData } from "../../store/Slices/MessagesSlice/messagesSlice";
+import { fetchDeleteMessages } from "../../store/Slices/MessagesSlice/API";
 
 const MessagesPage = () => {
   const { messagesData } = useSelector(selectMessagesData);
-  console.log(messagesData);
+  const dispatch = useDispatch();
+  const deleteMessage = (id) => {
+    dispatch(fetchDeleteMessages(messagesData[0]));
+  };
   return (
     <div className="message-page-container">
       <div className="messages-page">
@@ -24,7 +28,16 @@ const MessagesPage = () => {
                 </div>
                 <div className="message-btns">
                   <button className="answer-btn">Answer</button>
-                  <button className="delete-btn">Delete</button>
+                  <button className="delete-btn" onClick={deleteMessage}>
+                    <span className="btn-text">Delete</span>
+                    <div className="btn-two">
+                      <img
+                        src="https://cdn-icons-png.flaticon.com/512/3405/3405244.png"
+                        alt=""
+                        className="delete-icon"
+                      />
+                    </div>
+                  </button>
                 </div>
               </div>
             );

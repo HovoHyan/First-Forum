@@ -57,7 +57,7 @@ const Register = () => {
     <form onSubmit={(e) => handleSubmit(e)} className="register">
       <h2>Register</h2>
       <input type="text" placeholder="UserName" name="userName" required />
-      <input type="email" placeholder="Email" name="email" required />
+      <input type="text" placeholder="Email" name="email" required />
       <input type="number" placeholder="Age" name="age" required />
       <input
         type={show ? "text" : "password"}

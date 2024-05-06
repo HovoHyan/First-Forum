@@ -6,6 +6,8 @@ import { texnikaPageReducer } from "./Slices/TexnikaSlice/texnikaPageSlice";
 import { recipePageReducer } from "./Slices/RecipSlice/recipePageSlice";
 import { messagesReducer } from "./Slices/MessagesSlice/messagesSlice";
 import { animalPageReducer } from "./Slices/AnimalSlice/animalPageSlice";
+import { tourPageReducer } from "./Slices/TourSlice/tourPageSlice";
+import { carPageReducer } from "./Slices/CarSlice/carPageSlice";
 
 const store = configureStore({
   reducer: {
@@ -16,6 +18,8 @@ const store = configureStore({
     allRecipeData: recipePageReducer,
     allMessagesData: messagesReducer,
     allAnimalData: animalPageReducer,
+    allTourData: tourPageReducer,
+    allCarData: carPageReducer,
   },
 });
 
