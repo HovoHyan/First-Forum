@@ -9,7 +9,7 @@ export const getAnimalData = createAsyncThunk("animalData/getAnimalData", async 
 });
 
 export const addNewAnimal = createAsyncThunk("animalData/addNewAnimal", async ({ data, activeUser }) => {
-  const newTexnikData = await POST("http://localhost:3005/animalData", data);
+  const newAnimalData = await POST("http://localhost:3005/animalData", data);
   const result2 = await PUT({
     url: `http://localhost:3005/usersData/${data.userId}`,
     newData: { ...activeUser, posts: [...activeUser.posts, data.id] },
@@ -18,5 +18,5 @@ export const addNewAnimal = createAsyncThunk("animalData/addNewAnimal", async ({
     url: `http://localhost:3005/activeLoginData/${data.userId}`,
     newData: { ...activeUser, posts: [...activeUser.posts, data.id] },
   });
-  return { newTexnikData, result2, result3 };
+  return { newAnimalData, result2, result3 };
 });

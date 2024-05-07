@@ -9,7 +9,7 @@ export const getRecipeData = createAsyncThunk("recipeData/getRecipeData", async 
 });
 
 export const addNewRecipe = createAsyncThunk("recipeData/addNewRecipe", async ({ data, activeUser }) => {
-  const newTexnikData = await POST("http://localhost:3005/recipeData", data);
+  const newRecipeData = await POST("http://localhost:3005/recipeData", data);
   const result2 = await PUT({
     url: `http://localhost:3005/usersData/${data.userId}`,
     newData: { ...activeUser, posts: [...activeUser.posts, data.id] },
@@ -18,5 +18,5 @@ export const addNewRecipe = createAsyncThunk("recipeData/addNewRecipe", async ({
     url: `http://localhost:3005/activeLoginData/${data.userId}`,
     newData: { ...activeUser, posts: [...activeUser.posts, data.id] },
   });
-  return { newTexnikData, result2, result3 };
+  return { newRecipeData, result2, result3 };
 });
